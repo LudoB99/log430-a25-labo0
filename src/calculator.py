@@ -7,7 +7,8 @@ class Calculator:
     def __init__(self):
         self.last_result = 0
 
-    def get_hello_message(self):
+    @staticmethod
+    def get_hello_message():
         """ Show welcome message """
         return "== Calculatrice v1.0 =="
 
@@ -28,7 +29,7 @@ class Calculator:
 
     def division(self, v1, v2):
         """ Divide 2 values. Show an error if V2 is zero. """
-        if (v2 != 0):
+        if v2 != 0:
             self.last_result = v1 / v2
             return self.last_result
         else:
